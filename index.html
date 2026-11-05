@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Funciones</title>
+
+  <style>
+    h1 {
+      color: red;
+      font-family: "Oswald", sans-serif;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+function suma(a, b) {
+  let resultado = a + b;
+  document.write(resultado);
+}
+
+function texto(cadena, colortexto, tam) {
+  document.write("<font size='" + tam + "' color='" + colortexto + "'><b>" + cadena + "</b></font>");
+}
+
+function texto2(cadena, nivel, color, fuente) {
+  let estilo = "";
+  if (color) estilo += "color: " + color + "; ";
+  if (fuente) estilo += "font-family: " + fuente + "; ";
+
+  document.write("<h" + nivel + " style='" + estilo + "'>" + cadena + "</h" + nivel + ">");
+}
+
+function salta() {
+  document.write("<br>");
+}
+
+suma(40, 20);
+salta();
+
+texto("saludos a todos", "navy", 3);
+salta();
+
+texto("Bienvenidos", "orange", 3);
+salta();
+
+texto2("hola H con 3", 3);
+texto2("hola H con 6", 6, "red", "oswald");
+</script>
+
+</body>
+</html>
