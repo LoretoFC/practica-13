@@ -7,7 +7,7 @@
   <style>
     h1 {
       color: red;
-      font-family: "Oswald", sans-serif;
+      font-family: "oswald";
       font-size: 50px;
     }
   </style>
@@ -24,12 +24,15 @@ function texto(cadena, colortexto, tam) {
   document.write("<font size='" + tam + "' color='" + colortexto + "'><b>" + cadena + "</b></font>");
 }
 
-function texto2(cadena, nivel, color, fuente) {
+function texto2(cadena, tam, colortexto, tipografia) {
   let estilo = "";
-  if (color) estilo += "color: " + color + "; ";
-  if (fuente) estilo += "font-family: " + fuente + "; ";
-
-  document.write("<h" + nivel + " style='" + estilo + "'>" + cadena + "</h" + nivel + ">");
+  if (colortexto) {
+    estilo += "color: " + colortexto + "; ";
+  }
+  if (tipografia) {
+    estilo += "font-family: " + tipografia + "; ";
+  }
+  document.write("<h" + tam + " style='" + estilo + "'>" + cadena + "</h" + tam + ">");
 }
 
 function salta() {
@@ -38,10 +41,8 @@ function salta() {
 
 suma(40, 20);
 salta();
-
 texto("saludos a todos", "navy", 3);
 salta();
-
 texto("Bienvenidos", "orange", 3);
 salta();
 
